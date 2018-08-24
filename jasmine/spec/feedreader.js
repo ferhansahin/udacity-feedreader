@@ -26,6 +26,18 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
+        /* loops through each feed in the allFeeds object and
+         * ensures it has a URL defined and that the name is not
+         * empty.
+        */
+
+        it ('URL is defined', function(){
+            for (feed of allFeeds){
+                expect(feed.url).toBeDefined();
+                expect(feed.url.length).not.toBE(0);
+            }
+        })
+
          /* loops through each feed in the allFeeds object and
          * ensures it has a name defined and that the name is not
          * empty.
